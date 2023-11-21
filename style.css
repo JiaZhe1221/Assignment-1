@@ -1,0 +1,659 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+.background-container {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+}
+
+.rotated-text {
+    position: absolute;
+    top: 800px;
+    right: -200px;
+    transform: translateY(-50%) rotate(90deg);
+    color: rgb(255, 255, 255); 
+    font-size: 250px; 
+    font-family: 'Anton', sans-serif; 
+    white-space: nowrap;
+}
+
+.rotated-text-2 {
+    position: absolute;
+    top: 1530px;
+    right: 1150px;
+    transform: translateY(-50%) rotate(270deg);
+    color: rgb(255, 255, 255); 
+    font-size: 250px;
+    font-family: 'Anton', sans-serif; 
+    white-space: nowrap;
+
+}
+
+.container {
+    max-width: max-content;
+    width: auto;
+    margin: 0 auto;
+}
+
+header, .navbar {
+    background-color: #333;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1000;
+}
+
+h2, nav a {
+    font-family: 'Overpass', sans-serif;
+    color: white;
+    margin-left: 15px;
+}
+
+.navbar {
+    opacity: 85%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5;
+    background-color: #000000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 8px;
+}
+
+nav a {
+    font-family: 'Overpass', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    color: purple;
+    transition: transform 0.3 ease, color 0.3 ease;
+}
+
+nav ul li:last-child {
+    margin-right: 30px; 
+}
+
+.hero-section {
+    position: relative;
+    height: 780px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.hero-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+    align-items: center;
+
+}
+
+.hero-image {
+    display:f flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.image-button {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.image-button:hover {
+    background-color: rgb(248, 119, 248);
+}
+
+main {
+    padding-bottom: 20px;
+
+}
+
+h1 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 200%;
+    text-align: center;
+    color: white;
+    margin: 30px;
+}
+
+.song-wrapper {
+    display: flex;
+    overflow-x: auto; 
+}
+
+.song-container {
+    display: flex;
+    z-index: 1;
+}
+
+.song {
+    text-align: center;
+    width: 300px;
+    margin-right: 35px;
+}
+
+.song + .song {
+    margin-left: 20px;
+}
+
+.song-content {
+    background-color: rgba(245, 245, 245, 1); 
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.song img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.song-title {
+    margin-top: 10px;
+}
+
+.play-button {
+    background-color: purple; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: rgb(248, 119, 248);
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto; 
+    padding: 20px 0; 
+}
+
+.video {
+    text-align: center;
+    width: 700px;
+    margin-right: 20px;
+}
+
+.video iframe{
+    max-width: 100%;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.nav-button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.nav-button:hover {
+    background-color: rgb(248, 119, 248);
+}
+
+footer {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 12px;
+    vertical-align: baseline;
+    text-align: center;
+}
+
+footer a{
+    font-size: 12px;
+    color: #fff;
+}
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    overflow: hidden;
+}
+
+.social-media a:hover{
+    transform: scale(1.2);
+    transition: transform 0.3 ease;
+}
+
+.social-media img {
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3 ease;
+}
+
+/* dates page */
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-video iframe {
+    padding-top: 20px;
+    width: 900px;
+    height: 500px;
+}
+
+.event-details{
+    display: flex;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#events-table {
+    width: 60%; 
+    margin: 0 auto; 
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#events-table td {
+    font-size: 17px;
+
+}
+
+#events-table th, #events-table td {
+    font-family: 'Overpass', sans-serif;
+    padding-bottom: 30px;
+    text-align: left;
+    color: #fff;
+    width: 30%;
+}
+
+th {
+    font-size: 40px;
+}
+
+/* News page */
+
+.news-container {
+    padding-top:  70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news-item {
+    height: 260px;
+    background: #333;
+    margin-bottom: 80px;
+    position: relative;
+    padding-left: 320px;
+    transition: transform 0.3s ease;
+    display: flex;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+}
+
+.news-item img {
+    width: 260px;
+    position: absolute;
+    left: 50px;
+    top: -40px;
+
+}
+
+.news-content {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.summary h2{
+    font-size: 30px;
+    color: white;
+}
+
+p.summary {
+    font-size: 15px;
+    color: white;
+}
+
+.more a{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 22px;
+    background: linear-gradient(225deg,#7b77e2,#9b6ed9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    bottom: 40px;
+    right: 60px;
+
+}
+
+.more a:hover{
+    transform: scale(1.1);
+    transition: transform 0.3 ease;
+}
+
+/* For Merch page*/
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.popup button {
+    margin-top: 10px;
+}
+
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially off-screen */
+    width: 300px;
+    height: 100%;
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    backdrop-filter: blur(5px);
+}
+
+.side-panel.open {
+    right: 0;
+}
+
+.panel-content {
+    padding: 20px;
+}
+
+.cart-header {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 25px;
+    color: white;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+#checkoutButton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: purple;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add this CSS to style the pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.popup button {
+    margin-top: 10px;
+}
+
+#qrPopupCloseButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: purple;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the "Paid" button in the QR popup */
+#qrPopupPaidButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: purple;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the thanks popup */
+#thanksPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    color: white;
+    font-family: 'Overpass', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#thanksPopup p {
+    margin: 0;
+}
+
+/* Add some background overlay for the thanks popup */
+#thanksPopup::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.popupCart {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 1; /* Initial opacity */
+    transition: opacity 1s ease; /* Add transition for opacity */
+}
+
+.popupCart.fade-out {
+    opacity: 0; /* Set opacity to 0 when the fade-out class is applied */
+    pointer-events: none; /* Disable pointer events when invisible */
+}
+
+#merchandise{
+    padding-top: 70px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.merch-item {
+    box-sizing: border-box;
+    width: 250px; /* Adjust the width of each item container as needed */
+    height: 350px;
+    margin: 30px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.item-image-container {
+    width: 100%;
+    height: 215px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.item-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.add-to-cart-button {
+    background-color: purple;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Additional styles for item name and price */
+h3, p {
+    margin: 5px 0;
+}
+
+/* Add styles for cart items */
+#cartItemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-item {
+    width: 100%; /* Adjust the width as needed */
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Add a border for each cart item */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cart-item img {
+    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    height: auto;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+.buy-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    overflow: hidden; /* This is important for the animation */
+    position: relative;
+}
+
