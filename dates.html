@@ -15,7 +15,29 @@
     <title>Joker Xue - Dates</title>
     <script src="script.js" defer></script>
 </head>
-<body class="dates-pages">
+<body>
+
+    <mobile-nav class="mobilenav" id="mobile-nav">    
+        <div class="mobile-icon" onclick="toggleMobileSidebar()">
+            <img src="images/apple music.png" alt="Mobile Icon" style="width: 24px; height: 24px;">
+        </div>
+    
+        <!-- Sidebar -->
+        <div id="mobile-sidebar" style="display: none;">
+            <!-- Your sidebar content goes here -->
+            <a href="index.html">Home</a>
+            <a href="dates.html">Dates</a>
+            <a href="news.html">News</a>
+            <a href="merch.html">Merch</a>
+            <a href="#" class="app-mobile">App</a>
+        </div>
+
+        <div id="mobile-header">
+            <a href="index.html" id="home-link">JOKER XUE</a>
+        </div>
+    </mobile-nav>
+
+
     <div class="container" id="top">
         <header class="navbar" id="navbar">
             <nav>
@@ -36,14 +58,14 @@
             <nav>
                 <ul>
                     <li><a href="dates.html">Dates</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="merch.html">Merch</a></li>
-                    <li><a href="app.html">App</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="merch.html">Merch</a></li>
+                        <li><a href="#" onclick="openPopup()">App</a></li>
                 </ul>
             </nav>
         </header>
         <div class="hero-section" id="heroSection">
-            <img class="hero-image" src="images/IMG_0770.JPG" alt="Dates Hero Image">
+            <img class="hero-image-dates" src="images/xzq(1).jpeg" alt="Dates Hero Image">
             <div class="hero-video">
                 <iframe width="800" height="450" src="https://www.youtube.com/embed/8q9T69pU5Ek?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -51,7 +73,6 @@
         <main class="dates-pages">
             <section>
                 <h1>Upcoming Tour Dates</h1>
-                <!-- Event details -->
                 <div class="event-details">
                     <table id="events-table">
                         <thead>
@@ -79,5 +100,28 @@
             email：jansonleong1221@gmail.com
         </footer>
     </div>
+
+    <div id="appPopup" class="popup-container">
+        <div class="popup-content">
+            <!-- Close button for the pop-up -->
+            <span class="close-button" onclick="closePopup()">&times;</span>
+
+            <!-- Content of the pop-up -->
+            <h2>Joker Xue App</h2>
+            <p>Scan the QR codes below with your mobile phone to download:</p>
+            <div class="store-container">
+                <div class="store">
+                    <p>App Store</p>
+                    <img src="images/QR(try).png" alt="App Store QR Code">
+                </div>
+                
+                <div class="store">
+                    <p>Play Store</p>
+                    <img src="images/QR(try).png" alt="Play Store QR Code">
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -13,12 +13,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-5qR7HAA4npJnGN8tFpBWSNRcG+8mhjRbUj1BKlE9w5Jzh5ujzAWaxlRq1fDROA/iC+30E/WUe4o7iZ7nePJNgw==" crossorigin="anonymous" />
+
     <title>Joker Xue</title>
     <script src="script.js" defer></script>
 </head>
 <body>
+    <mobile-nav class="mobilenav" id="mobile-nav">    
+        <div class="mobile-icon" onclick="toggleMobileSidebar()">
+            <img src="images/apple music.png" alt="Mobile Icon" style="width: 24px; height: 24px;">
+        </div>
+    
+        <!-- Sidebar -->
+        <div id="mobile-sidebar" style="display: none;">
+            <!-- Your sidebar content goes here -->
+            <a href="index.html">Home</a>
+            <a href="dates.html">Dates</a>
+            <a href="news.html">News</a>
+            <a href="merch.html">Merch</a>
+            <a href="#" class="app-mobile">App</a>
+        </div>
+
+        <div id="mobile-header">
+            <a href="index.html" id="home-link">JOKER XUE</a>
+        </div>
+    </mobile-nav>
+    
     <div class="background-container">
         <div class="container" id="top">
+            <text>
+                <div class="rotated-text">JOKER</div>
+                <div class="rotated-text-2">XUE</div>
+            </text>
             <header class="navbar" id="navbar">
                 <nav>
                     <div class="social-media">
@@ -32,7 +58,7 @@
                 </nav>
                 <nav>
                     <ul>
-                        <li><h2><a href="index.html">JOKER XUE</a></h2></li>
+                        <li><h3><a href="index.html">JOKER XUE</a></h3></li>
                     </ul>
                 </nav>
                 <nav>
@@ -40,17 +66,14 @@
                         <li><a href="dates.html">Dates</a></li>
                         <li><a href="news.html">News</a></li>
                         <li><a href="merch.html">Merch</a></li>
-                        <li><a href="app.html">App</a></li>
+                        <li><a href="#" onclick="openPopup()">App</a></li>
                     </ul>
                 </nav>
             </header>
             <div class="hero-section" id="heroSection">
-                <div class="hero-images">
-                    <img class="hero-image" src="images/IMG_0770.JPG" alt="Hero Image 1">
-                    <img class="hero-image" src="images/test.jpg" alt="Hero Image 2">
-                    <img class="hero-image" src="images/test1.avif" alt="Hero Image 3">
-                    <img class="hero-image" src="images/test2.jpeg" alt="Hero Image 4">
-                </div>
+                <div class="hero-image-1">
+                    <img class="hero-image" src="images/xzq(1).jpeg" alt="Hero Image 1">
+                </div>  
                 <div class="image-buttons">
                     <button class="image-button" onclick="changeImage(0)"></button>
                     <button class="image-button" onclick="changeImage(1)"></button>
@@ -65,64 +88,133 @@
                         <div class="song-container">
                             <div class="song">
                                 <div class="song-content">
-                                    <img src="images/念（song）.jpeg" alt="Song 1">
-                                    <p class="song-title">念</p>
-                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/track/6IGncAdjgBTJfuJqYvklnj')">Play on Spotify</button>
-                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E5%BF%B5/1697617818?i=1697617819')">Play on Apple Music</button>
+                                    <img src="images/album1.jpeg" alt="Song 1">
+                                    <p class="song-title">无数</p>
+                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/album/5iKJwAiDKFl0IPM4kQ55XX')">Play on Spotify</button>
+                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E7%84%A1%E6%95%B8/1645518616')">Play on Apple Music</button>
                                 
                                 </div>
                             </div>
                         
                             <div class="song">
                                 <div class="song-content">
-                                    <img src="images/念（song）.jpeg" alt="Song 1">
-                                    <p class="song-title">念</p>
-                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/track/6IGncAdjgBTJfuJqYvklnj')">Play on Spotify</button>
-                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E5%BF%B5/1697617818?i=1697617819')">Play on Apple Music</button>
+                                    <img src="images/album2.jpeg" alt="Song 1">
+                                    <p class="song-title">天外来物</p>
+                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/album/6IfVnXZCdRH3cp2bKOJbXn')">Play on Spotify</button>
+                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E5%A4%A9%E5%A4%96%E4%BE%86%E7%89%A9/1546954603')">Play on Apple Music</button>
                                 
                                 </div>
                             </div>
                         
                             <div class="song">
                                 <div class="song-content">
-                                    <img src="images/念（song）.jpeg" alt="Song 1">
-                                    <p class="song-title">念</p>
-                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/track/6IGncAdjgBTJfuJqYvklnj')">Play on Spotify</button>
-                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E5%BF%B5/1697617818?i=1697617819')">Play on Apple Music</button>
+                                    <img src="images/album3.jpeg" alt="Song 1">
+                                    <p class="song-title">塵</p>
+                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/album/0m6CjTolvhN5IJKL4O6yAQ')">Play on Spotify</button>
+                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E5%A1%B5/1492989585')">Play on Apple Music</button>
                                 
                                 </div>
                             </div>
                         
                             <div class="song">
                                 <div class="song-content">
-                                    <img src="images/念（song）.jpeg" alt="Song 1">
-                                    <p class="song-title">念</p>
-                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/track/6IGncAdjgBTJfuJqYvklnj')">Play on Spotify</button>
-                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E5%BF%B5/1697617818?i=1697617819')">Play on Apple Music</button>
+                                    <img src="images/album4.jpeg" alt="Song 1">
+                                    <p class="song-title">怪咖</p>
+                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/album/0wt7vfE7K0C6rymlxXHCvt')">Play on Spotify</button>
+                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E6%80%AA%E5%92%96/1595748795')">Play on Apple Music</button>
                                 
                                 </div>
                             </div>
                         
                             <div class="song">
                                 <div class="song-content">
-                                    <img src="images/念（song）.jpeg" alt="Song 1">
-                                    <p class="song-title">念</p>
-                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/track/6IGncAdjgBTJfuJqYvklnj')">Play on Spotify</button>
-                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E5%BF%B5/1697617818?i=1697617819')">Play on Apple Music</button>
+                                    <img src="images/album5.jpeg" alt="Song 1">
+                                    <p class="song-title">渡</p>
+                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/album/7nD96CUbgCyzRHxbftQhpK')">Play on Spotify</button>
+                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E6%B8%A1/1317208440')">Play on Apple Music</button>
                                 
                                 </div>
                             </div>
 
                             <div class="song">
                                 <div class="song-content">
-                                    <img src="images/念（song）.jpeg" alt="Song 1">
-                                    <p class="song-title">念</p>
-                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/track/6IGncAdjgBTJfuJqYvklnj')">Play on Spotify</button>
-                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E5%BF%B5/1697617818?i=1697617819')">Play on Apple Music</button>
-                                
+                                    <img src="images/album6.jpeg" alt="Song 1">
+                                    <p class="song-title">初学者</p>
+                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/album/4IlbFUwa4Fd5laEAD3H6lQ')">Play on Spotify</button>
+                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E5%88%9D%E5%AD%B8%E8%80%85/1132054826')">Play on Apple Music</button>
+
+                                </div>
+                            </div>
+
+                            <div class="song">
+                                <div class="song-content">
+                                    <img src="images/album7.jpeg" alt="Song 1">
+                                    <p class="song-title">意外</p>
+                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/album/2C7iPovSAu3Y34kNis6vvj')">Play on Spotify</button>
+                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E6%84%8F%E5%A4%96/921934440')">Play on Apple Music</button>
+
+                                </div>
+                            </div>
+
+                            <div class="song">
+                                <div class="song-content">
+                                    <img src="images/album8.jpeg" alt="Song 1">
+                                    <p class="song-title">你过得好吗</p>
+                                    <button class="play-button" onclick="playOnPlatform('https://open.spotify.com/album/5l9taAMjee4maqOP68vqPN')">Play on Spotify</button>
+                                    <button class="play-button" onclick="playOnPlatform('https://music.apple.com/my/album/%E4%BD%A0%E9%81%8E%E5%BE%97%E5%A5%BD%E5%97%8E/1613909886')">Play on Apple Music</button>
+
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                </section>
+
+                <h1>Songs</h1>
+                <section class="songs-section">
+                    <div class="song-player" onclick="toggleAudio('audio1')">
+                        <img src="images/念（song）.jpeg" alt="Song Image">
+                        <p class="song-title">Your Song Title</p>
+                        <audio id="audio1" preload="none">
+                            <source src="songs/念.mp3" type="audio/mp3">
+                            Your browser does not support the audio tag.
+                        </audio>
+                    </div>
+                
+                    <div class="song-player" onclick="toggleAudio('audio2')">
+                        <img src="images/念（song）.jpeg" alt="Song Image">
+                        <p class="song-title">Your Song Title</p>
+                        <audio id="audio2" preload="none">
+                            <source src="songs/念.mp3" type="audio/mp3">
+                            Your browser does not support the audio tag.
+                        </audio>
+                    </div>
+
+                    <div class="song-player" onclick="toggleAudio('audio2')">
+                        <img src="images/念（song）.jpeg" alt="Song Image">
+                        <p class="song-title">Your Song Title</p>
+                        <audio id="audio2" preload="none">
+                            <source src="songs/念.mp3" type="audio/mp3">
+                            Your browser does not support the audio tag.
+                        </audio>
+                    </div>
+
+                    <div class="song-player" onclick="toggleAudio('audio2')">
+                        <img src="images/念（song）.jpeg" alt="Song Image">
+                        <p class="song-title">Your Song Title</p>
+                        <audio id="audio2" preload="none">
+                            <source src="songs/念.mp3" type="audio/mp3">
+                            Your browser does not support the audio tag.
+                        </audio>
+                    </div>
+
+                    <div class="song-player" onclick="toggleAudio('audio2')">
+                        <img src="images/念（song）.jpeg" alt="Song Image">
+                        <p class="song-title">Your Song Title</p>
+                        <audio id="audio2" preload="none">
+                            <source src="songs/念.mp3" type="audio/mp3">
+                            Your browser does not support the audio tag.
+                        </audio>
                     </div>
 
                 </section>
@@ -150,8 +242,29 @@
                 email：jansonleong1221@gmail.com
             </footer>
         </div>
-        <div class="rotated-text">JOKER</div>
-        <div class="rotated-text-2">XUE</div>
+    </div>
+
+    <!-- Add this div for the pop-up window -->
+    <div id="appPopup" class="popup-container">
+        <div class="popup-content">
+            <!-- Close button for the pop-up -->
+            <span class="close-button" onclick="closePopup()">&times;</span>
+
+            <!-- Content of the pop-up -->
+            <h2>Joker Xue App</h2>
+            <p>Scan the QR codes below with your mobile phone to download:</p>
+            <div class="store-container">
+                <div class="store">
+                    <p>App Store</p>
+                    <img src="images/QR(try).png" alt="App Store QR Code">
+                </div>
+                
+                <div class="store">
+                    <p>Play Store</p>
+                    <img src="images/QR(try).png" alt="Play Store QR Code">
+                </div>
+            </div>
+        </div>
     </div>
     
 </body>

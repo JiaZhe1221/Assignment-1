@@ -16,6 +16,27 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <mobile-nav class="mobilenav" id="mobile-nav">    
+        <div class="mobile-icon" onclick="toggleMobileSidebar()">
+            <img src="images/apple music.png" alt="Mobile Icon" style="width: 24px; height: 24px;">
+        </div>
+    
+        <!-- Sidebar -->
+        <div id="mobile-sidebar" style="display: none;">
+            <!-- Your sidebar content goes here -->
+            <a href="index.html">Home</a>
+            <a href="dates.html">Dates</a>
+            <a href="news.html">News</a>
+            <a href="merch.html">Merch</a>
+            <a href="#" class="app-mobile">App</a>
+        </div>
+
+        <div id="mobile-header">
+            <a href="index.html" id="home-link">JOKER XUE</a>
+        </div>
+    </mobile-nav>
+
+
     <div class="container" id="top">
         <header class="navbar" id="navbar">
             <nav>
@@ -23,6 +44,7 @@
                     <li><h2><a href="index.html">JOKER XUE</a></h2></li>
                 </ul>
             </nav>
+            <nav><h1>Merch Store</h1></nav>
             <nav>
                 <ul>
                     <li><a href="https://world.taobao.com/dianpu/282583310.htm?spm=a21wu.12321156-tw.shop-area.1.29274920UFomG4" target="_blank" id="cartButton">Official Website</a></li>
@@ -30,81 +52,73 @@
             </nav>
         </header>
         <main>
-            <section id="merchandise">
-                <div class="merch-item">
-                    <div class="item-image-container">
-                        <img src="images/item(1).jpeg" alt="Item 1">
-                    </div>
-                    <h3>Item 1 Name</h3>
-                    <p>$19.99</p>
-                    <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
-                </div>
-                
-                <div class="merch-item">
-                    <div class="item-image-container">
-                        <img src="images/item(1).jpeg" alt="Item 1">
-                    </div>
-                    <h3>Item 1 Name</h3>
-                    <p>$19.99</p>
-                    <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
-                </div>
-
-                <div class="merch-item">
-                    <div class="item-image-container">
-                        <img src="images/item(1).jpeg" alt="Item 1">
-                    </div>
-                    <h3>Item 1 Name</h3>
-                    <p>$19.99</p>
-                    <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
-                </div>
-
-                <div class="merch-item">
-                    <div class="item-image-container">
-                        <img src="images/item(1).jpeg" alt="Item 1">
-                    </div>
-                    <h3>Item 1 Name</h3>
-                    <p>$19.99</p>
-                    <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
-                </div>
-
-                <div class="merch-item">
-                    <div class="item-image-container">
-                        <img src="images/item(1).jpeg" alt="Item 1">
-                    </div>
-                    <h3>Item 1 Name</h3>
-                    <p>$19.99</p>
-                    <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
-                </div>
-
-                <div class="merch-item">
-                    <div class="item-image-container">
-                        <img src="images/item(1).jpeg" alt="Item 1">
-                    </div>
-                    <h3>Item 1 Name</h3>
-                    <p>$19.99</p>
-                    <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
-                </div>
-
-                <div class="merch-item">
-                    <div class="item-image-container">
-                        <img src="images/item(1).jpeg" alt="Item 1">
-                    </div>
-                    <h3>Item 1 Name</h3>
-                    <p>$19.99</p>
-                    <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
-                </div>
-
-                <div class="merch-item">
-                    <div class="item-image-container">
-                        <img src="images/item(1).jpeg" alt="Item 1">
-                    </div>
-                    <h3>Item 1 Name</h3>
-                    <p>$19.99</p>
-                    <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
-                </div>
             
-                <!-- Add more items as needed -->
+            <!-- New Releases Section -->
+            <section id="new-releases" class="merch-section">
+                <h4>New Releases</h4>
+                <div class="merch-items">
+                    <div class="merch-item new-release">
+                        <div class="item-image-container">
+                            <img src="images/item(1).jpeg" alt="Item 1">
+                        </div>
+                        <div class="item-details">
+                            <h3>Item 1 Name</h3>
+                            <p class="price">$19.99</p>
+                            <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="merch-item new-release">
+                        <div class="item-image-container">
+                            <img src="images/item(1).jpeg" alt="Item 1">
+                        </div>
+                        <div class="item-details">
+                            <h3>Item 1 Name</h3>
+                            <p class="price">$19.99</p>
+                            <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="merch-item new-release">
+                        <div class="item-image-container">
+                            <img src="images/item(1).jpeg" alt="Item 1">
+                        </div>
+                        <div class="item-details">
+                            <h3>Item 1 Name</h3>
+                            <p class="price">$19.99</p>
+                            <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="merch-item new-release">
+                        <div class="item-image-container">
+                            <img src="images/item(1).jpeg" alt="Item 1">
+                        </div>
+                        <div class="item-details">
+                            <h3>Item 1 Name</h3>
+                            <p class="price">$19.99</p>
+                            <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
+                        </div>
+                    </div>
+                    <!-- Add more new release items as needed -->
+                </div>
             </section>
+            
+            <!-- Hot Sales Section -->
+            <section id="hot-sales" class="merch-section">
+                <h2>Hot Sales</h2>
+                <div class="merch-items">
+                    <div class="merch-item hot-sale">
+                        <div class="item-image-container">
+                            <img src="images/item(2).jpeg" alt="Item 2">
+                        </div>
+                        <div class="item-details">
+                            <h3>Item 2 Name</h3>
+                            <p class="price">$29.99</p>
+                            <a href="https://world.taobao.com/item/123456789" target="_blank" class="buy-now-button">Buy Now</a>
+                        </div>
+                    </div>
+                    <!-- Add more hot sale items as needed -->
+                </div>
+            </section>
+            
             
         </main>
         <footer>
@@ -118,6 +132,28 @@
         </footer>
 
 
+    </div>
+
+    <div id="appPopup" class="popup-container">
+        <div class="popup-content">
+            <!-- Close button for the pop-up -->
+            <span class="close-button" onclick="closePopup()">&times;</span>
+
+            <!-- Content of the pop-up -->
+            <h2>Joker Xue App</h2>
+            <p>Scan the QR codes below with your mobile phone to download:</p>
+            <div class="store-container">
+                <div class="store">
+                    <p>App Store</p>
+                    <img src="images/QR(try).png" alt="App Store QR Code">
+                </div>
+                
+                <div class="store">
+                    <p>Play Store</p>
+                    <img src="images/QR(try).png" alt="Play Store QR Code">
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

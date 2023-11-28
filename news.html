@@ -16,6 +16,27 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <mobile-nav class="mobilenav" id="mobile-nav">    
+        <div class="mobile-icon" onclick="toggleMobileSidebar()">
+            <img src="images/apple music.png" alt="Mobile Icon" style="width: 24px; height: 24px;">
+        </div>
+    
+        <!-- Sidebar -->
+        <div id="mobile-sidebar" style="display: none;">
+            <!-- Your sidebar content goes here -->
+            <a href="index.html">Home</a>
+            <a href="dates.html">Dates</a>
+            <a href="news.html">News</a>
+            <a href="merch.html">Merch</a>
+            <a href="#" class="app-mobile">App</a>
+        </div>
+
+        <div id="mobile-header">
+            <a href="index.html" id="home-link">JOKER XUE</a>
+        </div>
+    </mobile-nav>
+
+
     <div class="container" id="top">
         <header class="navbar" id="navbar">
             <nav>
@@ -36,9 +57,9 @@
             <nav>
                 <ul>
                     <li><a href="dates.html">Dates</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="merch.html">Merch</a></li>
-                    <li><a href="app.html">App</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="merch.html">Merch</a></li>
+                        <li><a href="#" onclick="openPopup()">App</a></li>
                 </ul>
             </nav>
         </header>
@@ -49,7 +70,7 @@
                     <div class="news-item">
                         <img src="images/news1.jpeg" alt="News 1">
                         <div class="news-content">
-                            <h2 class="summary">薛之谦鸟巢演唱会，轻舟已过万重山 </h2>
+                            <h2 class="summary">薛之谦鸟巢演唱会，轻舟已过万重山</h2>
                             <p class="summary">“你知道我这18年，是怎么过的吗？今天我鸟巢唱完了，神仙也难不住我。”
                                 恭喜我们的大明星薛之谦圆梦北京。
                             </p>
@@ -60,15 +81,38 @@
                     </div>
 
                     <div class="news-item">
-                        <img src="images/news1.jpeg" alt="News 1">
+                        <img src="images/news2.jpeg" alt="News 1">
                         <div class="news-content">
-                            <h2 class="summary">薛之谦鸟巢演唱会，轻舟已过万重山 </h2>
-                            <p class="summary">“你知道我这18年，是怎么过的吗？今天我鸟巢唱完了，神仙也难不住我。” 恭喜我们的大明星薛之谦圆梦北京。</p>
+                            <h2 class="summary">罕见提起5岁儿 薛之谦：他在学校到处说“爸爸完蛋了</h2>
+                            <p class="summary">在最新一集《火星情报局》中，薛之谦罕见提起5岁儿子“小雪糕”，称儿子看了他因高烧不退而取消演唱会的影片后，童言无忌地跟奶奶说：“完了，姥姥，爸爸芭比Q（barbecue，完蛋的意思）了！”</p>
                             <div class="more">
-                                <a href="https://www.sohu.com/a/711756125_121661785" target="_blank" class="more">MORE &gt;&gt;</a>
+                                <a href="https://www.zaobao.com.sg/entertainment/story20231121-1451366" target="_blank" class="more">MORE &gt;&gt;</a>
                             </div>
                         </div>
                     </div>
+
+                    <div class="news-item">
+                        <img src="images/news3.jpeg" alt="News 1">
+                        <div class="news-content">
+                            <h2 class="summary">高烧39度唱不了宣布退票 薛之谦：粉丝机票住宿费全包了</h2>
+                            <p class="summary">薛之谦因感染流感，扁桃腺发炎，高烧至39度，但仍穿上便服亲自上台向粉丝表示，“我有义务当面说抱歉”同时现场承诺，成都观众可自行选择是否退票，外地粉丝不仅能全额退票，机票、火车票、酒店费用也退，费用全由他包下。</p>
+                            <div class="more">
+                                <a href="https://www.zaobao.com.sg/entertainment/story20230911-1432252" target="_blank" class="more">MORE &gt;&gt;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <img src="images/news4.jpeg" alt="News 1">
+                        <div class="news-content">
+                            <h2 class="summary">高烧39度唱不了宣布退票 薛之谦：粉丝机票住宿费全包了</h2>
+                            <p class="summary">薛之谦因感染流感，扁桃腺发炎，高烧至39度，但仍穿上便服亲自上台向粉丝表示，“我有义务当面说抱歉”同时现场承诺，成都观众可自行选择是否退票，外地粉丝不仅能全额退票，机票、火车票、酒店费用也退，费用全由他包下。</p>
+                            <div class="more">
+                                <a href="https://www.zaobao.com.sg/entertainment/story20230911-1432252" target="_blank" class="more">MORE &gt;&gt;</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </main>
@@ -81,6 +125,28 @@
             <a href="http://www.taihe.com/license.html">1910523</a>
             email：jansonleong1221@gmail.com
         </footer>
+    </div>
+
+    <div id="appPopup" class="popup-container">
+        <div class="popup-content">
+            <!-- Close button for the pop-up -->
+            <span class="close-button" onclick="closePopup()">&times;</span>
+
+            <!-- Content of the pop-up -->
+            <h2>Joker Xue App</h2>
+            <p>Scan the QR codes below with your mobile phone to download:</p>
+            <div class="store-container">
+                <div class="store">
+                    <p>App Store</p>
+                    <img src="images/QR(try).png" alt="App Store QR Code">
+                </div>
+                
+                <div class="store">
+                    <p>Play Store</p>
+                    <img src="images/QR(try).png" alt="Play Store QR Code">
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
