@@ -8,7 +8,7 @@ To view the website, follow these steps:
 
 Download the Files:
 Clone the repository to your local machine using the following command:
-git clone https://github.com/your-username/joker-xue-website.git
+git clone https://github.com/JiaZhe1221/joker-xue-website.git
 
 Open the Website:
 Navigate to the project directory.
