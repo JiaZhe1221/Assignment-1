@@ -8,7 +8,7 @@ To view the website, follow these steps:
 
 Download the Files:
 Clone the repository to your local machine using the following command:
-git clone https://github.com/JiaZhe1221/Assignment1.git
+git clone https://github.com/JiaZhe1221/Assignment-1.git
 
 Open the Website:
 Navigate to the project directory.
