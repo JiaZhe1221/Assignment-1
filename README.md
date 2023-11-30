@@ -11,8 +11,7 @@ Clone the repository to your local machine using the following command:
 git clone https://github.com/JiaZhe1221/Assignment-1.git
 
 Open the Website:
-Navigate to the project directory.
-Open the index.html file in your preferred web browser.
+https://jiazhe1221.github.io/Assignment-1/index.html
 
 Features
 User Authentication

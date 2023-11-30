@@ -496,12 +496,16 @@ const signOutButton = document.getElementById('signOutButton');
         signOut();
     });
 
+
+
     function signOut() {
         //clear the user's login status
         localStorage.setItem('isLoggedIn', 'false');
 
         location.reload(); 
     }
+
+    
 
     //handle checkout
     const checkoutButton = document.getElementById('checkoutButton');
@@ -512,9 +516,11 @@ const signOutButton = document.getElementById('signOutButton');
 
     function checkout() {
         showQrPopup();
-        clearCart();
-        location.reload(); 
+        
     }
+
+    
+    
 
     //show QR when checking out
     function showQrPopup() {
@@ -524,6 +530,8 @@ const signOutButton = document.getElementById('signOutButton');
         const qrImage = document.getElementById('qrImage');
         qrImage.src = 'images/QR Apple.png';
     }
+
+    
 
     function clearCart() {
         localStorage.removeItem('cartItems');
@@ -535,3 +543,16 @@ const signOutButton = document.getElementById('signOutButton');
         const qrPopup = document.getElementById('qrPopup');
         qrPopup.style.display = 'none';
     }
+
+    function closeQrPopupAndShowMessage() {
+        // Close the QR code popup
+        closeQrPopup();
+        alert('Thank you for buying with us!');
+        location.reload();
+        clearCart();
+    }
+    
+
+    
+
+    
