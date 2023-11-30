@@ -14,19 +14,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-5qR7HAA4npJnGN8tFpBWSNRcG+8mhjRbUj1BKlE9w5Jzh5ujzAWaxlRq1fDROA/iC+30E/WUe4o7iZ7nePJNgw==" crossorigin="anonymous" />
-
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <title>Joker Xue</title>
     <script src="script.js" defer></script>
 </head>
 <body>
     <mobile-nav class="mobilenav" id="mobile-nav">    
         <div class="mobile-icon" onclick="toggleMobileSidebar()">
-            <img src="images/apple music.png" alt="Mobile Icon" style="width: 24px; height: 24px;">
+            <img src="images/joker xue.png" alt="Mobile Icon" style="width: 24px; height: 24px;">
         </div>
     
-        <!-- Sidebar -->
+        <div id="google_translate_element"></div>
+
         <div id="mobile-sidebar" style="display: none;">
-            <!-- Your sidebar content goes here -->
             <a href="index.html">Home</a>
             <a href="dates.html">Dates</a>
             <a href="news.html">News</a>
@@ -67,6 +67,7 @@
                         <li><a href="news.html">News</a></li>
                         <li><a href="merch.html">Merch</a></li>
                         <li><a href="#" onclick="openPopup()">App</a></li>
+                        
                     </ul>
                 </nav>
             </header>
@@ -175,22 +176,53 @@
                     <div class="song-players">
                         <button onclick="changeSong(-1)">←</button>
                         <div class="song-player" onclick="toggleAudio('audio1')">
-                            <img src="images/念（song）.jpeg" alt="Song Image" id="image1">
-                            <p class="song-title">念</p>
+                            <img src="images/BeiRen.jpeg" alt="Song Image" id="image1">
+                            <p class="song-title">被人</p>
                             <audio id="audio1" preload="none">
-                                <source src="songs/Nian.mp3" type="audio/mp3">
+                                <source src="songs/BeiRen.mp3" type="audio/mp3">
                                 Your browser does not support the audio tag.
                             </audio>
                         </div>
                         <div class="song-player" onclick="toggleAudio('audio2')">
-                            <img src="images/念（song）.jpeg" alt="Song Image">
-                            <p class="song-title">Your Song Title 1</p>
+                            <img src="images/ChongBai.jpeg" alt="Song Image" id="image2">
+                            <p class="song-title">崇拜</p>
                             <audio id="audio2" preload="none">
-                                <source src="songs/念.mp3" type="audio/mp3">
+                                <source src="songs/ChongBai.mp3" type="audio/mp3">
                                 Your browser does not support the audio tag.
                             </audio>
                         </div>
-                        <!-- Add more song players as needed -->
+                        <div class="song-player" onclick="toggleAudio('audio3')">
+                            <img src="images/QiShi.jpeg" alt="Song Image" id="image3">
+                            <p class="song-title">其实</p>
+                            <audio id="audio3" preload="none">
+                                <source src="songs/qishi.mp3" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                        <div class="song-player" onclick="toggleAudio('audio4')">
+                            <img src="images/YanYuan.jpeg" alt="Song Image" id="image4">
+                            <p class="song-title">演员</p>
+                            <audio id="audio4" preload="none">
+                                <source src="songs/YanYuan.mp3" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                        <div class="song-player" onclick="toggleAudio('audio5')">
+                            <img src="images/念（song）.jpeg" alt="Song Image" id="image5">
+                            <p class="song-title">念</p>
+                            <audio id="audio5" preload="none">
+                                <source src="songs/Nian.mp3" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                        <div class="song-player" onclick="toggleAudio('audio6')">
+                            <img src="images/AiMei.jpeg" alt="Song Image" id="image6">
+                            <p class="song-title">暧昧</p>
+                            <audio id="audio6" preload="none">
+                                <source src="songs/AiMei.mp3" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
                         <button onclick="changeSong(1)">→</button>
                     </div>
                 </section>
@@ -220,13 +252,11 @@
         </div>
     </div>
 
-    <!-- Add this div for the pop-up window -->
+
     <div id="appPopup" class="popup-container">
         <div class="popup-content">
-            <!-- Close button for the pop-up -->
-            <span class="close-button" onclick="closePopup()">&times;</span>
 
-            <!-- Content of the pop-up -->
+            <span class="close-button" onclick="closePopup()">&times;</span>
             <h2>Joker Xue App</h2>
             <p>Scan the QR codes below with your mobile phone to download:</p>
             <div class="store-container">
@@ -242,6 +272,7 @@
             </div>
         </div>
     </div>
+    
     
 </body>
 </html>

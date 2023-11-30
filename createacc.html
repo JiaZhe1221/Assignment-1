@@ -9,10 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Roboto&family=Tilt+Neon&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Merriweather:ital,wght@0,900;1,900&family=Roboto&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@800&display=swap" rel="stylesheet">
-    <title>Joker Xue - Merch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-5qR7HAA4npJnGN8tFpBWSNRcG+8mhjRbUj1BKlE9w5Jzh5ujzAWaxlRq1fDROA/iC+30E/WUe4o7iZ7nePJNgw==" crossorigin="anonymous" />
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <title>Joker Xue - Create Account</title>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -21,9 +25,9 @@
             <img src="images/apple music.png" alt="Mobile Icon" style="width: 24px; height: 24px;">
         </div>
     
-        <!-- Sidebar -->
+
         <div id="mobile-sidebar" style="display: none;">
-            <!-- Your sidebar content goes here -->
+
             <a href="index.html">Home</a>
             <a href="dates.html">Dates</a>
             <a href="news.html">News</a>
@@ -46,17 +50,47 @@
             </nav>
             <nav><h1>Create Account</h1></nav>
         </header>
-        <main>
-            <h1>Create Account</h1>
+        <main class="createacc">
+            <div class="container-signup">
+                <h7>Create Account</h7>
                 <form id="signupForm">
-                    <label for="signupUsername">Username:</label>
-                    <input type="text" id="signupUsername" required>
-                    <br>
-                    <label for="signupPassword">Password:</label>
-                    <input type="password" id="signupPassword" required>
-                    <br>
-                    <button type="submit">Create Account</button>
+                    <div class="field email-field">
+                        <div class="input-field">
+                            <input type="email" placeholder="Enter your email" class="email" id="signupUsername"/>
+                        </div>
+                        <span class="error email-error">
+                            <i class="bx bx-error-circle error-icon"></i>
+                            <p class="error-text">Please enter a valid email</p>
+                        </span>
+                    </div>
+                    <div class="field create-password">
+                        <div class="input-field">
+                            <input type="password" placeholder="Create password" id="signupPassword" class="password" />
+                            <i class="bx bx-hide show-hide"></i>
+                        </div>
+                        <span class="error password-error">
+                            <i class="bx bx-error-circle error-icon"></i>
+                            <p class="error-text">
+                                Please enter at least 8 characters with a number, symbol, small, and
+                                capital letter.
+                            </p>
+                        </span>
+                    </div>
+                    <div class="field confirm-password">
+                        <div class="input-field">
+                            <input type="password" placeholder="Confirm password" class="cPassword" />
+                            <i class="bx bx-hide show-hide"></i>
+                        </div>
+                        <span class="error cPassword-error">
+                            <i class="bx bx-error-circle error-icon"></i>
+                            <p class="error-text">Password doesn't match</p>
+                        </span>
+                    </div>
+                    <div class="input-field button">
+                        <input type="submit" value="Submit Now" />
+                    </div>
                 </form>
+            </div>
         </main>
         <footer>
             Copyright 2018 © .TAIHE MUSIC GROUP
@@ -68,9 +102,9 @@
             email：jansonleong1221@gmail.com
         </footer>
 
-
     </div>
 
     
 </body>
 </html>
+

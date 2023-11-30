@@ -9,9 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Roboto&family=Tilt+Neon&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Merriweather:ital,wght@0,900;1,900&family=Roboto&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-5qR7HAA4npJnGN8tFpBWSNRcG+8mhjRbUj1BKlE9w5Jzh5ujzAWaxlRq1fDROA/iC+30E/WUe4o7iZ7nePJNgw==" crossorigin="anonymous" />
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <title>Joker Xue - Merch</title>
     <script src="script.js" defer></script>
 </head>
@@ -21,9 +25,9 @@
             <img src="images/apple music.png" alt="Mobile Icon" style="width: 24px; height: 24px;">
         </div>
     
-        <!-- Sidebar -->
+
         <div id="mobile-sidebar" style="display: none;">
-            <!-- Your sidebar content goes here -->
+
             <a href="index.html">Home</a>
             <a href="dates.html">Dates</a>
             <a href="news.html">News</a>
@@ -44,7 +48,7 @@
                     <li><h2><a href="index.html">JOKER XUE</a></h2></li>
                 </ul>
             </nav>
-            <nav><h1>Merch Store</h1></nav>
+            <nav><h8>Merch Store</h8></nav>
             <nav>
                 <ul>
                     <button id="toggleSignInButton">Sign In</button>
@@ -54,112 +58,153 @@
         </header>
         <main>
             
-            <!-- New Releases Section -->
             <section id="new-releases" class="merch-section">
                 <h4>New Releases</h4>
                 <div class="merch-items">
                     <div class="merch-item new-release" id="item1">
                         <div class="item-image-container">
-                            <img src="images/item(1).jpeg" alt="Item 1">
+                            <img src="images/item1.jpeg" alt="Item 1">
                         </div>
                         <div class="item-details">
-                            <h3>Item 1 Name</h3>
-                            <p class="price">$19.99</p>
+                            <h3>Dangerouspeople薛之謙dsp短袖T恤男夏季潮牌休閒情侶半袖T恤ins</h3>
+                            <p class="price">$33.88</p>
                             <div id="addToCartDesktop">
-                                <!-- This div is shown only on desktop -->
-                                <button onclick="addToCart('item1')">Add to Cart</button>
+                                <button class="addToCartButton" data-item-name="短袖T恤男夏季潮牌休閒情侶半袖T恤" data-item-image="images/item1.jpeg" data-item-price="$33.88">Add to Cart</button>
                             </div>
                             <div id="buyNowMobile">
-                                <!-- This div is shown only on mobile -->
-                                <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
+                                <a href="https://world.taobao.com/item/637785049894.htm?spm=a21wu.11804641-tw.shop-content.3.49612ab57hGCy4" target="_blank" class="buy-now-button">Buy Now</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="merch-item new-release" id="item2">
                         <div class="item-image-container">
-                            <img src="images/item(1).jpeg" alt="Item 2">
+                            <img src="images/item2.jpeg" alt="Item 2">
                         </div>
                         <div class="item-details">
-                            <h3>Item 1 Name</h3>
-                            <p class="price">$19.99</p>
+                            <h3>Dangerous people薛之謙dsp潑墨紙袋人短袖T恤男寬鬆潮流半袖T恤</h3>
+                            <p class="price">$30.09</p>
                             <div id="addToCartDesktop">
-                                <!-- This div is shown only on desktop -->
-                                <button onclick="addToCart('item2')">Add to Cart</button>
+                                <button class="addToCartButton" data-item-name="潑墨紙袋人短袖T恤" data-item-image="images/item2.jpeg" data-item-price="$30.08">Add to Cart</button>
                             </div>
                             <div id="buyNowMobile">
-                                <!-- This div is shown only on mobile -->
-                                <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
+                                <a href="https://world.taobao.com/item/638120666042.htm?spm=a21wu.11804641-tw.shop-content.4.49612ab5cbnZs2" target="_blank" class="buy-now-button">Buy Now</a>
                             </div>
                         </div>
                     </div>
+
                     <div class="merch-item new-release" id="item3">
                         <div class="item-image-container">
-                            <img src="images/item(1).jpeg" alt="Item 3">
+                            <img src="images/item3.jpeg" alt="Item 3">
                         </div>
                         <div class="item-details">
-                            <h3>Item 1 Name</h3>
-                            <p class="price">$19.99</p>
+                            <h3>Dangerouspeople薛之謙dsp短袖潮牌基礎寬鬆休閒潮流情侶純色T恤</h3>
+                            <p class="price">$20.63</p>
                             <div id="addToCartDesktop">
-                                <!-- This div is shown only on desktop -->
-                                <button onclick="addToCart('item3')">Add to Cart</button>
+                                <button class="addToCartButton" data-item-name="休閒潮流情侶純色T恤" data-item-image="images/item3.jpeg" data-item-price="$20.63">Add to Cart</button>
                             </div>
                             <div id="buyNowMobile">
-                                <!-- This div is shown only on mobile -->
-                                <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
+                                <a href="https://world.taobao.com/item/643030028603.htm?spm=a21wu.11804641-tw.shop-content.5.49612ab5nLrn9V" target="_blank" class="buy-now-button">Buy Now</a>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="merch-item new-release" id="item4">
                         <div class="item-image-container">
-                            <img src="images/item(1).jpeg" alt="Item 4">
+                            <img src="images/item4.jpeg" alt="Item 4">
                         </div>
                         <div class="item-details">
-                            <h3>Item 1 Name</h3>
-                            <p class="price">$19.99</p>
+                            <h3>Dangerouspeople薛之謙dsp拼色仿羊羔絨夾克大口袋保暖潮情侶外套</h3>
+                            <p class="price">$56.60</p>
                             <div id="addToCartDesktop">
-                                <!-- This div is shown only on desktop -->
-                                <button onclick="addToCart('item4')">Add to Cart</button>
+                                <button class="addToCartButton" data-item-name="仿羊羔絨夾克大口袋保暖潮情侶外套" data-item-image="images/item4.jpeg" data-item-price="$56.60">Add to Cart</button>
                             </div>
                             <div id="buyNowMobile">
-                                <!-- This div is shown only on mobile -->
-                                <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
+                                <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.7.49612ab5iqfqSH" target="_blank" class="buy-now-button">Buy Now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="merch-item new-release" id="item5">
-                        <div class="item-image-container">
-                            <img src="images/item(1).jpeg" alt="Item 5">
-                        </div>
-                        <div class="item-details">
-                            <h3>Item 1 Name</h3>
-                            <p class="price">$19.99</p>
-                            <div id="addToCartDesktop">
-                                <!-- This div is shown only on desktop -->
-                                <button onclick="addToCart('item5')">Add to Cart</button>
-                            </div>
-                            <div id="buyNowMobile">
-                                <!-- This div is shown only on mobile -->
-                                <a href="https://world.taobao.com/item/651169941481.htm?spm=a21wu.11804641-tw.shop-content.8.20cc2ab53fSzDa.com/commerce/products/dangerouspeople---authentic-dsp/1917929084949147?referral_code=commerce_attachment&rid=221525161947664&ad_id&rt=1&refID=0&refType=0" target="_blank" class="buy-now-button">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Add more new release items as needed -->
                 </div>
-            </section>
-            
-            <!-- Hot Sales Section -->
-            <section id="hot-sales" class="merch-section">
                 <h2>Hot Sales</h2>
                 <div class="merch-items">
-                    
+
+                    <div class="merch-item new-release" id="item1">
+                        <div class="item-image-container">
+                            <img src="images/item5.jpeg" alt="Item 1">
+                        </div>
+                        <div class="item-details">
+                            <h3>Dangerouspeople薛之謙DSP世界和平休閒夏短袖T恤棉男女國潮T恤</h3>
+                            <p class="price">$37.67</p>
+                            <div id="addToCartDesktop">
+                                <button class="addToCartButton" data-item-name="世界和平休閒夏短袖T恤棉男女" data-item-image="images/item5.jpeg" data-item-price="$37.67">Add to Cart</button>
+                            </div>
+                            <div id="buyNowMobile">
+                                <a href="https://world.taobao.com/item/670262521061.htm?spm=a21wu.11804641-tw.shop-content.20.49612ab57sjom3" target="_blank" class="buy-now-button">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="merch-items">
+                        <div class="merch-item new-release" id="item2">
+                            <div class="item-image-container">
+                                <img src="images/item6.jpeg" alt="Item 2">
+                            </div>
+                            <div class="item-details">
+                                <h3>Dangerouspeople薛之謙dsp哥特字母圓領厚棉T美式潮男女復古套頭衫</h3>
+                                <p class="price">$43.34</p>
+                                <div id="addToCartDesktop">
+                                    <button class="addToCartButton" data-item-name="哥特字母圓領厚棉T美式潮男女復古套頭衫" data-item-image="images/item6.jpeg" data-item-price="$43.34">Add to Cart</button>
+                                </div>
+                                <div id="buyNowMobile">
+                                    <a href="https://world.taobao.com/item/679542365293.htm?spm=a21wu.11804641-tw.shop-content.24.49612ab5VGIj6R" target="_blank" class="buy-now-button">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="merch-items">
+                        <div class="merch-item new-release" id="item3">
+                            <div class="item-image-container">
+                                <img src="images/item7.jpeg" alt="Item 3">
+                            </div>
+                            <div class="item-details">
+                                <h3>Dangerouspeople薛之謙dsp重工刺繡夾克拼接pu皮美式潮男女棒球服</h3>
+                                <p class="price">$58.68</p>
+                                <div id="addToCartDesktop">
+                                    <button class="addToCartButton" data-item-name="夾克拼接pu皮美式潮男女棒球服" data-item-image="images/item7.jpeg" data-item-price="$58.68">Add to Cart</button>
+                                </div>
+                                <div id="buyNowMobile">
+                                    <a href="https://world.taobao.com/item/680612275570.htm?spm=a21wu.11804641-tw.shop-content.28.49612ab5ZIzr3J" target="_blank" class="buy-now-button">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="merch-items">
+                        <div class="merch-item new-release" id="item4">
+                            <div class="item-image-container">
+                                <img src="images/item8.jpeg" alt="Item 4">
+                            </div>
+                            <div class="item-details">
+                                <h3>Dangerouspeople薛之謙dsp字母棉服潮高街寬鬆防寒百搭男女厚外套</h3>
+                                <p class="price">$69.86</p>
+                                <div id="addToCartDesktop">
+                                    <button class="addToCartButton" data-item-name="字母棉服潮高街寬鬆防寒百搭男女厚外套" data-item-image="images/item8.jpeg" data-item-price="$69.85">Add to Cart</button>
+                                </div>
+                                <div id="buyNowMobile">
+                                    <a href="https://world.taobao.com/item/681552640990.htm?spm=a21wu.11804641-tw.shop-content.36.49612ab51HHAtd" target="_blank" class="buy-now-button">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                    
+                
             </section>
+
             
             
         </main>
-        <footer>
+        <footer class="merch">
             Copyright 2018 © .TAIHE MUSIC GROUP
             <a href="https://www.beianc.com/licence/10001263630.html">[粤ICP备17102508号-2]</a><br>
             license number:
@@ -188,19 +233,25 @@
     </div>
 
     <div id="cartSidebar" class="cart-sidebar">
-        <!-- Cart content goes here -->
-        <h2>Your Cart</h2>
-        <!-- Add your cart items and other content here -->
-    
-        <!-- Close button -->
+        <h2>Cart</h2>
+        <div id="cartItemsContainer"></div>
 
+        <button id="signOutButton" onclick="signOut()">Sign Out</button>
+        <button id="checkoutButton">Checkout</button>
+
+        <div id="qrPopup" class="popup">
+            <span class="close" onclick="closeQrPopup()">&times;</span>
+
+            <img id="qrImage" src="images/QR Apple.png" alt="QR Code">
+        </div>
     </div>
     
-    <!-- Overlay -->
-    <div id="overlay" class="overlay" onclick="closeCart()"></div>
+
+    <img src="images/cart.png" alt="cart" id="userButton" style="display: none;">
     
-    <!-- Your existing HTML content goes here -->
-    <!-- ... -->
+
+    <div id="overlay" class="overlay" onclick="closeCart()"></div>
+
 
     
 </body>
