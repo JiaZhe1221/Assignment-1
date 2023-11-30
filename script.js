@@ -48,6 +48,9 @@ function changeImage(index) {
     }
 }
 
+// Set the initial state of the buttons when the page loads
+document.addEventListener("DOMContentLoaded", setInitialButtonState);
+
 // Function to automatically change the image every 5 seconds
 function autoChangeImage() {
     setInterval(function() {
@@ -65,15 +68,50 @@ function playOnPlatform(url) {
     window.open(url, '_blank');
 }
 
+var currentSongIndex = 0;
+var songPlayers = document.querySelectorAll('.song-player');
+
 function toggleAudio(audioID) {
     var audio = document.getElementById(audioID);
+    var image = document.getElementById(`image${audioID.charAt(audioID.length - 1)}`);
 
     if (audio.paused) {
         audio.play();
+        image.classList.add('fade-out');
     } else {
         audio.pause();
+        audio.currentTime = 0;
+        image.classList.remove('fade-out');
     }
+
+    // Reset animation and show image when the audio finishes playing
+    audio.addEventListener('ended', function () {
+        image.classList.remove('fade-out');
+    });
 }
+
+
+function changeSong(direction) {
+    songPlayers[currentSongIndex].style.display = 'none';
+    currentSongIndex += direction;
+
+    if (currentSongIndex < 0) {
+        currentSongIndex = songPlayers.length - 1;
+    } else if (currentSongIndex >= songPlayers.length) {
+        currentSongIndex = 0;
+    }
+
+    songPlayers[currentSongIndex].style.display = 'flex';
+}
+
+// Show the first song player initially
+if (window.location.pathname.includes("index.html")) {
+    // Your index.html specific code
+
+    // Show the first song player initially
+    songPlayers[currentSongIndex].style.display = 'flex';
+}
+
 
 const videoUrls = [
     'https://www.youtube.com/embed/iQhKe0q7nqs',
@@ -127,11 +165,11 @@ function populateEventTable(eventDetails) {
     });
 }
 
-
+//app
 function openPopup() {
     document.getElementById("appPopup").style.display = "flex";
 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+
 // Function to close the pop-up
 function closePopup() {
     document.getElementById("appPopup").style.display = "none";
@@ -184,3 +222,176 @@ function detectDevice() {
 // Add a click event listener to your app button
 var appButton = document.querySelector(".app-mobile"); // replace with the actual class or ID of your app button
 appButton.addEventListener("click", detectDevice);
+
+
+
+//create account
+document.addEventListener('DOMContentLoaded', function () {
+    const signupForm = document.getElementById('signupForm');
+
+    signupForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const username = document.getElementById('signupUsername').value;
+        const password = document.getElementById('signupPassword').value;
+
+        // Check if the username is already taken
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const existingUser = users.find(u => u.username === username);
+
+        if (existingUser) {
+            alert('Username already exists. Please choose another one.');
+        } else {
+            // Hash the password before storing it
+            const hashedPassword = hashPassword(password);
+
+            // Add the new user to the local storage
+            users.push({ username, password: hashedPassword });
+            localStorage.setItem('users', JSON.stringify(users));
+            alert('Account created successfully!');
+        }
+    });
+
+    function hashPassword(password) {
+        // In a real-world scenario, use a proper hashing library (e.g., bcrypt)
+        // For simplicity, using a basic hash function here (not suitable for production)
+        return btoa(password); // Base64 encoding (not secure, only for demonstration)
+    }
+});
+
+//merch sign in
+// signin.js
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleSignInButton = document.getElementById('toggleSignInButton');
+    const signInModal = document.getElementById('signInModal');
+    const signInButton = document.getElementById('signInButton');
+    const userButton = document.getElementById('userButton'); // Assuming this is the user button with the image
+
+    // Check if the user is logged in when the page loads
+    checkUserLoginStatus();
+
+    // Show the sign-in modal when the button is clicked
+    toggleSignInButton.addEventListener('click', function () {
+        signInModal.style.display = 'block';
+    });
+
+    // Close the sign-in modal when the close button is clicked
+    window.closeSignInModal = function () {
+        signInModal.style.display = 'none';
+    };
+
+    // Close the sign-in modal if the user clicks outside of it
+    window.onclick = function (event) {
+        if (event.target === signInModal) {
+            signInModal.style.display = 'none';
+        }
+    };
+
+    const signinForm = document.getElementById('signinForm');
+
+    signinForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const username = document.getElementById('signinUsername').value;
+        const password = document.getElementById('signinPassword').value;
+
+        // Check if user exists in local storage
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const user = users.find(u => u.username === username && u.password === hashPassword(password));
+
+        if (user) {
+            alert('Sign in successful!');
+            signInModal.style.display = 'none';
+            toggleSignInButton.style.display = 'none';
+            userButton.style.display = 'block';
+
+            // Set the user login status in local storage
+            localStorage.setItem('isLoggedIn', 'true');
+        } else {
+            alert('Invalid username or password.');
+        }
+    });
+
+    function hashPassword(password) {
+        // In a real-world scenario, use a proper hashing library (e.g., bcrypt)
+        // For simplicity, using a basic hash function here (not suitable for production)
+        return btoa(password); // Base64 encoding (not secure, only for demonstration)
+    }
+
+    function checkUserLoginStatus() {
+        // Check if the user is logged in based on the flag in local storage
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+        if (isLoggedIn) {
+            toggleSignInButton.style.display = 'none';
+            userButton.style.display = 'block';
+        }
+    }
+});
+
+//cart
+// Open the cart sidebar
+function openCart() {
+    document.getElementById('cartSidebar').style.width = '250px';
+    document.getElementById('overlay').style.width = '100%';
+}
+
+// Close the cart sidebar
+function closeCart() {
+    document.getElementById('cartSidebar').style.width = '0';
+    document.getElementById('overlay').style.width = '0';
+}
+
+document.getElementById('userButton').addEventListener('click', openCart);
+
+document.addEventListener('DOMContentLoaded', function () {
+    const addToCartDesktop = document.getElementById('addToCartDesktop');
+    const cartSidebar = document.getElementById('cartSidebar');
+
+    addToCartDesktop.addEventListener('click', function () {
+        // Check if the user is logged in
+        if (isLoggedIn()) {
+            const itemName = 'Item 1'; // You can dynamically get the item name based on your HTML structure
+            addToCart(itemName);
+            updateCartSidebar(); // Update the cart sidebar content
+            alert('Item added to the cart!');
+        } else {
+            alert('Please sign in to add items to your cart.');
+            // Optionally, you can redirect the user to the sign-in page here
+        }
+    });
+
+    function addToCart(itemName) {
+        // Retrieve existing cart items from local storage
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        // Check if the item is already in the cart
+        const existingItem = cartItems.find(item => item === itemName);
+
+        if (!existingItem) {
+            // If the item is not in the cart, add it
+            cartItems.push(itemName);
+
+            // Save the updated cart items to local storage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        }
+    }
+
+    function updateCartSidebar() {
+        // Retrieve cart items from local storage
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        // Clear the existing content in the cart sidebar
+        cartSidebar.innerHTML = '';
+
+        // Display each item in the cart
+        cartItems.forEach(item => {
+            const cartItemElement = document.createElement('p');
+            cartItemElement.textContent = item;
+            cartSidebar.appendChild(cartItemElement);
+        });
+    }
+
+    function isLoggedIn() {
+        // Check if the user is logged in based on the flag in local storage
+        return localStorage.getItem('isLoggedIn') === 'true';
+    }
+});

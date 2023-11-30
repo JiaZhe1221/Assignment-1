@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Roboto&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Merriweather:ital,wght@0,900;1,900&family=Roboto&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@800&display=swap" rel="stylesheet">
+    <title>Joker Xue - Merch</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <mobile-nav class="mobilenav" id="mobile-nav">    
+        <div class="mobile-icon" onclick="toggleMobileSidebar()">
+            <img src="images/apple music.png" alt="Mobile Icon" style="width: 24px; height: 24px;">
+        </div>
+    
+        <!-- Sidebar -->
+        <div id="mobile-sidebar" style="display: none;">
+            <!-- Your sidebar content goes here -->
+            <a href="index.html">Home</a>
+            <a href="dates.html">Dates</a>
+            <a href="news.html">News</a>
+            <a href="merch.html">Merch</a>
+            <a href="#" class="app-mobile">App</a>
+        </div>
+
+        <div id="mobile-header">
+            <a href="index.html" id="home-link">JOKER XUE</a>
+        </div>
+    </mobile-nav>
+
+
+    <div class="container" id="top">
+        <header class="navbar" id="navbar">
+            <nav>
+                <ul>
+                    <li><h2><a href="index.html">JOKER XUE</a></h2></li>
+                </ul>
+            </nav>
+            <nav><h1>Create Account</h1></nav>
+        </header>
+        <main>
+            <h1>Create Account</h1>
+                <form id="signupForm">
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" required>
+                    <br>
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                    <br>
+                    <button type="submit">Create Account</button>
+                </form>
+        </main>
+        <footer>
+            Copyright 2018 © .TAIHE MUSIC GROUP
+            <a href="https://www.beianc.com/licence/10001263630.html">[粤ICP备17102508号-2]</a><br>
+            license number:
+            <a href="http://www.taihe.com/doc/culture_license">粤网文20180902-359号</a>
+            audio-visual license：
+            <a href="http://www.taihe.com/license.html">1910523</a>
+            email：jansonleong1221@gmail.com
+        </footer>
+
+
+    </div>
+
+    
+</body>
+</html>
