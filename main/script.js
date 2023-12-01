@@ -3,6 +3,9 @@ document.getElementById('mobile-nav').addEventListener('click', function () {
     document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
 });
 
+document.getElementById('navbar').addEventListener('click', function () {
+    document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
+});
 //index.html
 
 //hero image section
@@ -528,7 +531,7 @@ const signOutButton = document.getElementById('signOutButton');
         qrPopup.style.display = 'block';
 
         const qrImage = document.getElementById('qrImage');
-        qrImage.src = 'images/QR Apple.png';
+        qrImage.src = 'images/QRpay.jpg';
     }
 
     

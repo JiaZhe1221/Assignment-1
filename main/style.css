@@ -1161,9 +1161,12 @@ img#userButton:hover{
   }
   
   img#qrImage {
-      position: absolute;
-      top: 25%;
-      right: 36%;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 17%;
+    right: 35%;
+    
   }
 
 .Done {
